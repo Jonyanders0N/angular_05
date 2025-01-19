@@ -1,0 +1,10 @@
+<header style="margin-top: 200px;">
+
+</header>
+<ul>
+  @for (item of arrSquare; track $index) {
+    <li>
+      <app-square-container [data]="item" (flippedSquare)="updateArr($event)"></app-square-container>
+    </li>
+  }
+</ul>

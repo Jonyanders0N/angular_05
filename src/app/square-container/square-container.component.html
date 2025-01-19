@@ -1,0 +1,9 @@
+<div class="square-content">
+    <ng-container [ngTemplateOutlet]="dynamicSquareContent || defaultSquareContent"
+                  [ngTemplateOutletContext]="{$Implicit: data}"></ng-container>
+    <ng-template #defaultSquareContent>
+        <div class="square" 
+        [ngStyle]="{'background-color': getColor(data)}"
+        (click)="clickSquare(data)">{{ data.name }}</div>
+    </ng-template>
+</div>
